@@ -1,0 +1,171 @@
+author:              David Pätzel
+build-type:          Simple
+cabal-version:       >=1.10
+category:            Machine Learning
+copyright:           Copyright (c): 2023 David Pätzel
+license-file:        LICENSE
+license:             GPL-3
+maintainer:          david.paetzel@posteo.de
+name:                haxcs
+synopsis:            Haskell implementation of the XCS classifier system
+version:             0.5.0.0
+
+
+library
+  build-depends:       base >=4.9
+                     , MonadRandom
+                     , QuickCheck
+                     , cassava
+                     , containers
+                     , finite-typelits
+                     , generic-random
+                     , lens
+                     , monad-loops
+                     , mtl
+                     , optparse-applicative
+                     , process
+                     , protolude
+                     , random
+                     , random-shuffle
+                     , text
+                     , vector-sized
+                     , wl-pprint-text
+  default-language:    Haskell2010
+  exposed-modules:     CustomPrelude
+                     , Naturals
+                     , XCS.ASet
+                     , XCS.ActionSelection
+                     , XCS.Classifier
+                     , XCS.Classifier.Metadata
+                     , XCS.Classifier.Rule
+                     , XCS.Conf
+                     , XCS.Environment
+                     , XCS.Environment.Function
+                     , XCS.GeneticAlgorithm
+                     , XCS.Interface
+                     , XCS.Interface.Action
+                     , XCS.Interface.BitString
+                     , XCS.Interface.Condition
+                     , XCS.Interface.Detector
+                     , XCS.Interface.Mutator
+                     , XCS.Log
+                     , XCS.MSet
+                     , XCS.Mode
+                     , XCS.Population
+                     , XCS.Run
+                     , XCS.State
+                     , XCS.Storage
+                     , XCS.Storage.Map
+                     , XCS.Task.SingleStep.Multiplexer
+                     , XCS.Task.SingleStep.Multiplexer.All
+                     , XCS.Task.SingleStep.XOR
+                     , XCS.Util
+  ghc-options:         -Wall -Wno-name-shadowing -Wno-orphans
+  hs-source-dirs:      src
+
+
+executable haxcs-test
+  main-is:             Test.hs
+  build-depends:       base >=4.9
+                     , MonadRandom
+                     , QuickCheck
+                     -- , cabal-test-quickcheck
+                     , cassava
+                     , containers
+                     , finite-typelits
+                     , generic-random
+                     , lens
+                     , monad-loops
+                     , mtl
+                     , optparse-applicative
+                     , process
+                     , protolude
+                     , random
+                     , random-shuffle
+                     , text
+                     , vector-sized
+                     , wl-pprint-text
+  default-language:    Haskell2010
+  ghc-options:         -Wall -Wno-name-shadowing -Wno-orphans
+  hs-source-dirs:      src
+  other-modules:       CustomPrelude
+                     , Naturals
+                     , XCS.ASet
+                     , XCS.ActionSelection
+                     , XCS.Classifier
+                     , XCS.Classifier.Metadata
+                     , XCS.Classifier.Rule
+                     , XCS.Conf
+                     , XCS.Environment
+                     , XCS.GeneticAlgorithm
+                     , XCS.Interface
+                     , XCS.Interface.Action
+                     , XCS.Interface.BitString
+                     , XCS.Interface.Condition
+                     , XCS.Interface.Detector
+                     , XCS.Interface.Mutator
+                     , XCS.Log
+                     , XCS.MSet
+                     , XCS.Mode
+                     , XCS.Population
+                     , XCS.Run
+                     , XCS.State
+                     , XCS.Storage
+                     , XCS.Storage.Map
+                     , XCS.Util
+
+
+executable haxcs
+  main-is:             Main.hs
+  build-depends:       base >=4.9
+                     , MonadRandom
+                     , QuickCheck
+                     , cassava
+                     , containers
+                     , finite-typelits
+                     , generic-random
+                     , lens
+                     , monad-loops
+                     , mtl
+                     , optparse-applicative
+                     , process
+                     , protolude
+                     , random
+                     , random-shuffle
+                     , text
+                     , vector-sized
+                     , wl-pprint-text
+  default-language:    Haskell2010
+  ghc-options:         -Wall -Wno-name-shadowing -Wno-orphans
+  hs-source-dirs:      src
+  other-modules:       CustomPrelude
+                     , Graphics.EasyPlot
+                     , Naturals
+                     , Plot
+                     , XCS.ASet
+                     , XCS.ActionSelection
+                     , XCS.Classifier
+                     , XCS.Classifier.Metadata
+                     , XCS.Classifier.Rule
+                     , XCS.Conf
+                     , XCS.Environment
+                     , XCS.Environment.Function
+                     , XCS.GeneticAlgorithm
+                     , XCS.Interface
+                     , XCS.Interface.Action
+                     , XCS.Interface.BitString
+                     , XCS.Interface.Condition
+                     , XCS.Interface.Detector
+                     , XCS.Interface.Mutator
+                     , XCS.Log
+                     , XCS.MSet
+                     , XCS.Mode
+                     , XCS.Population
+                     , XCS.Run
+                     , XCS.State
+                     , XCS.Storage
+                     , XCS.Storage.Map
+                     , XCS.Task.SingleStep.Multiplexer
+                     , XCS.Task.SingleStep.Multiplexer.All
+                     , XCS.Task.SingleStep.XOR
+                     , XCS.Util
