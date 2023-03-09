@@ -1,6 +1,9 @@
 # haxcs
 
 
+[![DOI](https://zenodo.org/badge/611736447.svg)](https://zenodo.org/badge/latestdoi/611736447)
+
+
 Haskell implementation of the XCS classifier system. This was described in the
 2018 IWLCS paper [An Algebraic Description of
 XCS](https://doi.org/10.1145/3205651.3208248) by Pätzel and Hähner. As of 2023,
